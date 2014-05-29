@@ -1,0 +1,9 @@
+<h1>Hospitalized? Hospital-truth</h1>
+
+<% if signed_in? %>
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Please enter your zip code:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+<% end %>
