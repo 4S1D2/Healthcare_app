@@ -36,7 +36,7 @@ class FavoritesController < ApplicationController
   end
 
   def favorite_params
-    params.require(:favorite).permit(:id, :hospital_id, :user_id)
+    params.require(:data).permit(:id, :hospital_id, :user_id)
   end
 
   def load_favorite
