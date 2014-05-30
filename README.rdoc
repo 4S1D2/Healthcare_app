@@ -1,28 +1,18 @@
-== README
+# Hospital-truthed
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### GA WDI DC #1
 
-Things you may want to cover:
+### Project 1
 
-* Ruby version
+Hospital-truthed is a badly name application that searches for a healthcare providor with the least amount of healthcare associated infection, given a procedure. It was put together over a 4-day period to model the agile software development process. This is the first of three projects in the General Assembly Web Development Immersive course.
 
-* System dependencies
+### Technologies Used
 
-* Configuration
+* Ruby 2.1.1
+* Ruby on Rails 4.1.1
+* PostgreSQL Database
+* Authentication & Authorization using [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
+* [Medicare API](https://data.medicare.gov/developers/docs/healthcare-associated-infections#)
 
-* Database creation
+User Stories and ERD's to be uploaded soon.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
