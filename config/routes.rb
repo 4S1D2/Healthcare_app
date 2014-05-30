@@ -9,15 +9,10 @@ Rails.application.routes.draw do
     resources :favorites, except: [:edit, :update]
   end
 
-  resources :hospitals, only: [:index] do
-    collection do
-      get "search"
-    end
-  end
-
+  resources :hospitals
   resources :sessions, only: [:create]
 
-  # get '/search' => 'hospitals#search'
+  get '/search/hospitals' => 'hospitals#search'
 
   get 'signup' => 'users#new'
   get '/signin' => 'sessions#new'

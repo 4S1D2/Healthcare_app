@@ -1,5 +1,6 @@
 class Hospital < ActiveRecord::Base
-  belongs_to :favorite
+  has_many :favorites, dependent: :destroy
+  has_many :users, through: :favorites
 
 
 end

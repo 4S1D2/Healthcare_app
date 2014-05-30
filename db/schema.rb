@@ -11,13 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529143532) do
+ActiveRecord::Schema.define(version: 20140530014720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "favorites", force: true do |t|
+    t.integer "user_id_id"
+    t.integer "hospital_id_id"
+  end
+
+  create_table "hospitals", force: true do |t|
+    t.string  "hospital_name"
+    t.string  "address"
+    t.string  "city"
+    t.string  "state"
+    t.integer "zip_code"
+    t.string  "phone"
+    t.string  "measure"
+    t.float   "score"
+  end
+
   create_table "users", force: true do |t|
-    t.string "name"
     t.string "email"
     t.string "password_digest"
     t.string "remember_token"

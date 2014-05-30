@@ -3,8 +3,7 @@ class FavoritesController < ApplicationController
 
 
   def index
-    #view favorites
-    @user = User.find(session[:user_id])
+    @user = User.find(current_user)
     @favorites = @user.favorites
   end
 
@@ -13,22 +12,24 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    #add a hospital to favorites
-    @hospital = Hospital.create(hospital_params)
-    @favorite = Favorite.create(hospital_id: @hospital.id, user_id: session[:user_id])
-    redirect_to user_favorites_path(session(:user_id))
+    @hospital = Hospital.new(hospital_params)
+    @hospital.address = params[:data][:address_1]
+    @hospital.zip_code = params[:data][:zip_code]
+    @hospital.phone = params[:data][:phone_number][:phone_number]
+    @hospital.save
+    @favorite = Favorite.create(hospital_id: @hospital.id, user_id: current_user.id)
+    redirect_to user_favorites_path(current_user)
   end
 
   def destroy
-    #delete a hospital from favorites
     @favorite.destroy
-    redirect_to user_favorites_path(session(:user_id))
+    redirect_to user_favorites_path(current_user)
   end
 
   private
 
   def hospital_params
-    params.require(:data).permit(:provider_name, :provider_street_address, :provider_city, :provider_state, :provider_zip_code)
+    params.require(:data).permit(:id, :hospital_name, :address, :city, :state, :zip_code, :phone, :score, :measure)
   end
 
   def load_favorite

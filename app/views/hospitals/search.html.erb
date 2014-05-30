@@ -1,0 +1,27 @@
+<h2>Results for <%= params[:procedure] %></h2>
+
+
+  <table id="hospitals" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <% @hospitals.each do |hospital| %>
+    <tbody>
+      <tr>
+        <th><%= hospital["hospital_name"] %> </th>
+        <th><%= hospital["city"] %></th>
+        <th><%= hospital["state"] %></th>
+        <th><%= hospital["score"] %></th>
+        <td><%= button_to "Favorite", method: "create", controller: "favorites", user_id: current_user, data: hospital%></td>
+      </tr>
+    </tbody>
+    <% end %>
+
+
+  </table>
+

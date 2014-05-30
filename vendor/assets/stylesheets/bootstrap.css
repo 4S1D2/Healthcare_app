@@ -269,6 +269,7 @@ table {
   .table td,
   .table th {
     background-color: #fff !important;
+    width: auto !important;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -6803,3 +6804,4 @@ td.visible-print {
     display: none !important;
   }
 }
+
