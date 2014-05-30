@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20140530014720) do
   enable_extension "plpgsql"
 
   create_table "favorites", force: true do |t|
-    t.integer "user_id_id"
-    t.integer "hospital_id_id"
+    t.integer "user_id"
+    t.integer "hospital_id"
   end
 
   create_table "hospitals", force: true do |t|
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140530014720) do
   end
 
   create_table "users", force: true do |t|
+    t.string "name"
     t.string "email"
     t.string "password_digest"
     t.string "remember_token"
