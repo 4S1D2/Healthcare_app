@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
     @hospital.zip_code = params[:data][:zip_code]
     @hospital.phone = params[:data][:phone_number][:phone_number]
     @hospital.save
-    @favorite = Favorite.new(favorite_params)
+    @favorite = Favorite.new
     @favorite.user_id = current_user.id
     @favorite.hospital_id = @hospital.id
     @favorite.save
@@ -35,9 +35,9 @@ class FavoritesController < ApplicationController
     params.require(:data).permit(:id, :hospital_name, :address, :city, :state, :zip_code, :phone, :score, :measure)
   end
 
-  def favorite_params
-    params.require(:data).permit(:id, :hospital_id, :user_id)
-  end
+  # def favorite_params
+  #   params.require(:data).permit(:id, :hospital_id, :user_id)
+  # end
 
   def load_favorite
     return @favorite = Favorite.find(params[:id])
