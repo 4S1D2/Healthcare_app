@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
     @hospital.zip_code = params[:data][:zip_code]
     @hospital.phone = params[:data][:phone_number][:phone_number]
     @hospital.save
-    @favorite = Favorite.create(hospital_id: @hospital.id, user_id: current_user.id)
+    @favorite = Favorite.create(id: @hospital.id, user_id: current_user.id)
     redirect_to user_favorites_path(current_user)
   end
 
