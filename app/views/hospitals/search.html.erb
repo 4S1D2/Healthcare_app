@@ -17,7 +17,7 @@
         <th><%= hospital["city"] %></th>
         <th><%= hospital["state"] %></th>
         <th><%= hospital["score"] %></th>
-        <td><%= button_to "Favorite", method: "create", controller: "favorites", user_id: current_user, data: hospital%></td>
+        <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: current_user, data: hospital%></td>
       </tr>
     </tbody>
     <% end %>
