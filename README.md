@@ -1,6 +1,6 @@
 # Hospital-truthed
 
-### GA WDI DC #1
+### GA DC WDI#1
 
 ### Project 1
 
