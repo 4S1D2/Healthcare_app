@@ -14,5 +14,6 @@ Hospital-truthed is a badly name application that searches for a healthcare prov
 * Authentication & Authorization using [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
 * [Medicare API](https://data.medicare.gov/developers/docs/healthcare-associated-infections#)
 
-User Stories and ERD's to be uploaded soon.
+User Stories: http://imgur.com/TZsSGHU
 
+ERD: http://imgur.com/HDaBzVs
