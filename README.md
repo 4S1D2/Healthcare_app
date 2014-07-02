@@ -4,7 +4,7 @@
 
 ### Project 1
 
-Hospital-truthed is a badly name application that searches for a healthcare provider with the least amount of healthcare associated infection, given a procedure. It was put together over a 4-day period to model the agile software development process. This is the first of three projects in the General Assembly Web Development Immersive course.
+Hospital-truthed is a badly named application that searches for a healthcare provider with the least amount of healthcare associated infection, given a procedure. It was put together over a 4-day period to model the agile software development process. This is the first of three projects in the General Assembly Web Development Immersive course.
 
 ### Technologies Used
 
