@@ -1,0 +1,27 @@
+body, html {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.welcome {
+  background-color: rgba(199,217,239, 0.75);
+  margin: 0;
+  text-align: center;
+  color: rgba(64,36,42,1);
+  width: 100%;
+}
+
+#welcome-container {
+  background-image: url(http://www.housedecorin.com/photostock/methodist-hospital-for-surgery-interior.jpg);
+  background-size: cover;
+  height: 100%;
+  margin-top: -20px;
+  width: 100%;
+}
+
+#search-container {
+  margin-top: 50px;
+  margin-left: 150px
+
+}

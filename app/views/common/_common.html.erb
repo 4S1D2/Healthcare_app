@@ -1,8 +1,4 @@
 <% if signed_in? %>
-  <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    Signed in as <%= link_to current_user.first_name, current_user %>
-    <%= f.submit "Sign out", id: 'signout' %>
-  <% end %>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,6 +20,11 @@
           <li><a href="http://www.cdc.gov/hai/">HAI</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
+            Signed in as <%= link_to current_user.first_name, current_user %>
+            </br>
+            <%= f.submit "Sign out", id: 'signout' %>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
