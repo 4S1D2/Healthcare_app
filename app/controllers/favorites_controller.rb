@@ -12,7 +12,6 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    binding.pry
     @hospital = Hospital.new(hospital_params)
     @hospital.address = params[:data][:address]
     @hospital.zip_code = params[:data][:zip_code]
